@@ -2,8 +2,8 @@ import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from 't
 
 import Order from './Order';
 
-@Entity("ecommerces")
-export default class Ecommerce {
+@Entity("customers")
+export default class Customer {
     @PrimaryGeneratedColumn('increment')
     id: number;
 
@@ -13,6 +13,6 @@ export default class Ecommerce {
     @OneToMany(() => Order, order => order.ecommerce, {
         cascade: ['insert', 'update']
     })
-    @JoinColumn({ name: 'ecommerce_id' })
+    @JoinColumn({ name: 'customer_id' })
     orders: Order[];
 }

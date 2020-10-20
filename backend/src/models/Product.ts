@@ -4,6 +4,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export default class Product {
     @PrimaryGeneratedColumn('increment')
     id: number;
+
     @Column()
     name: string;
 }
