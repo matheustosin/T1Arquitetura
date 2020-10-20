@@ -1,0 +1,27 @@
+<section>
+    <div id="header-form">
+        <img src="../../../assets/default-placeholder.png" />
+        <h2>
+            Formulário para cadastro
+        </h2>
+        <h3>
+            Digite os dados necessários para cadastrar um PEDIDO
+        </h3>
+    </div>
+    <div id="container-form">
+        <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit(cadastroForm.value)">
+            <div>
+                <label for="name">
+                    Nome
+                </label>
+                <input type="text" formControlName="name" />
+            </div>
+            
+            <div id="form-button">
+                <button type="submit" [disabled] = "!cadastroForm.valid">
+                    Concluir
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

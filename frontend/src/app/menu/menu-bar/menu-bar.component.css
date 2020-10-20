@@ -1,0 +1,19 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    height: 100vh;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    line-height: 3em;
+    font-size: 1.15em;
+    border-bottom: 1px solid black;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
