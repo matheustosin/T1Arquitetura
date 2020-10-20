@@ -19,7 +19,7 @@ export default {
 
     async getOrdersByEcommerce(request: Request, response: Response) {
         const { id } = request.params;
-
+        
         const customerRepository = getRepository(Customer);
         // const customerOrders = customerRepository.find({
         //     cache: true,
@@ -28,7 +28,18 @@ export default {
         //         { "orders.ecommerce_id =: id": String, id },
         //     ]
         // });
+        const customerOrders = customerRepository.createQueryBuilder("orders")
+            .innerJoin("orders.ecommerce_id = :id", id)
+            .where("customers.id = :idCustomer", {idCustomer: 1})
+            .getMany();
+        console.log(customerOrders);
 
         return response.json("TESTE");
+    },
+
+    async getCustomerById(id: number) {
+        const customerRepository = getRepository(Customer);
+
+        return await customerRepository.findOne(id);
     }
 }
