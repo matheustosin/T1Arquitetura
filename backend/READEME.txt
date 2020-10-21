@@ -1,0 +1,18 @@
+delete from ecommerces;
+delete from orders;
+delete from products;
+delete from orders_products_products;
+delete from customers;
+
+drop table ecommerces;
+drop table orders;
+drop table products;
+drop table orders_products_products;
+drop table customers;
+
+
+
+
+delete from migrations;
+
+delete from sqlite_sequence;
