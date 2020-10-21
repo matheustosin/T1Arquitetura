@@ -20,6 +20,16 @@ export default {
     async getEcommerceById(id: number) {
         const ecommerceRepository = getRepository(Ecommerce);
 
-        return await ecommerceRepository.findOne(id);
+        const ecommerce = await ecommerceRepository.findOne(id);
+
+        return ecommerce;
+    },
+
+    async index(request: Request, response: Response) {
+        const ecommerceRepository = getRepository(Ecommerce);
+
+        const ecommerces = await ecommerceRepository.find();
+
+        return response.json(ecommerces);
     }
 }

@@ -8,6 +8,7 @@ import ProductController from './controllers/ProductController';
 const routes = Router();
 
 routes.post('/ecommerce/add', EcommerceController.create);
+routes.get('/ecommerce/all', EcommerceController.index);
 
 routes.post('/order/add', OrderController.create);
 routes.get('/order/getOrdersByEcommerce/:id', OrderController.getOrdersByEcommerce);
