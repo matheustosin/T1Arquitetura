@@ -1,3 +1,3 @@
 export enum ApiPaths {
-    test = '/auth'
+    ecommerce = 'ecommerce/'
  }

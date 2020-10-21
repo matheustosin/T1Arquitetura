@@ -11,10 +11,12 @@
     <div id="container-form">
         <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit(cadastroForm.value)">
             <div>
-                <label for="name">
-                    Nome
+                <label for="Ecommerce">
+                    Ecommerce
                 </label>
-                <input type="text" formControlName="name" />
+                <select formControlName="selectEcommerce">
+                    <option *ngFor="let ecommerce of ecommerces" [value]="ecommerce.name">Ecommerce.name</option>
+                </select>
                 <label for="requestDate">
                     Data do pedido
                 </label>

@@ -8,8 +8,13 @@ import{HttpClient } from '@angular/common/http';
 export class HttpServiceService {
 
   constructor(private http:HttpClient) { }
-  addEcommerce(data){
-    let url = `${environment.baseUrl}/${ApiPaths.test}/test`;
+  addEcommerce(name: string){
+    let url = `${environment.baseUrl}${ApiPaths.ecommerce}add`;
+    let data = {name : name};
+    return this.http.post(url,data);
+  }
+  getEcommerce(){
+    let url = `${environment.baseUrl}${ApiPaths.ecommerce}get`;
     return this.http.get(url);
   }
 }
