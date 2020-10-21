@@ -10,11 +10,11 @@ const routes = Router();
 routes.post('/ecommerce/add', EcommerceController.create);
 
 routes.post('/order/add', OrderController.create);
+routes.get('/order/getOrdersByEcommerce/:id', OrderController.getOrdersByEcommerce);
 
 routes.post('/product/add', ProductController.create);
 
 routes.post('/customer/add', CustomerController.create);
-routes.get('/customer/getOrdersByEcommerce/:id', CustomerController.getOrdersByEcommerce);
 
 
 export default routes;
