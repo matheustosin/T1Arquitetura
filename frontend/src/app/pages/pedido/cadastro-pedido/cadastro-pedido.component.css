@@ -32,32 +32,37 @@ section, #header-form{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    margin-top: 3%;
 }
 form{
     display: flex;
-    flex-direction: column;
-    height: 60%;
-    width: 50%;
+    flex-direction: row;
+    height: inherit;
+    width: 75%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 form div{
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    height: inherit;
 }
+
 form input{
     border: none;
     border-bottom: 1.9px solid black;
     padding:5px;
     width: 200px;
 }
-#form-button button{
+form button{
     border-radius: 90px;
     width: 120px;
     padding:5px 0px;
-}
-#form-button{
-    margin-top: auto;
     align-self: flex-end;
+    margin-top: auto;
+    border-bottom-width: 3px ;
+    border-right-width: 3px;
+}
+.productButton{
+    margin-top:auto;
 }

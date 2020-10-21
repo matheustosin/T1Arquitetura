@@ -4,9 +4,13 @@ section{
 }
 #menu{
     width: 22.5%;
+    height: 100%;
     float:left;
+    box-shadow: 10px 0 5px -2px grey;
 }
 #content{
     width: 77.5%;
+    height: 100%;
     float: right;
+    background-color: #ede4e2;
 }
