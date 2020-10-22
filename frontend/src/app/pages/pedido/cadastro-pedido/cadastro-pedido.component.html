@@ -15,7 +15,7 @@
                     Ecommerce
                 </label>
                 <select formControlName="selectEcommerce">
-                    <option *ngFor="let ecommerce of ecommerces" [value]="ecommerce.name">Ecommerce.name</option>
+                    <option *ngFor="let ecommerce of ecommerces" [value]="ecommerce.id">{{ecommerce.name}}</option>
                 </select>
                 <label for="requestDate">
                     Data do pedido

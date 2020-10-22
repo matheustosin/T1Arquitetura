@@ -11,13 +11,12 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
 })
 export class FormComponent implements OnInit {
   cadastroForm;
-  ecommerces;
+
   constructor(private formBuilder: FormBuilder, private httpService: HttpServiceService) {
     this.cadastroForm = this.formBuilder.group({
-      name: [null, [Validators.required]],
-      selectEcommerce : [null, [Validators.required]]
+      name: [null, [Validators.required]]
     });
-    this.ecommerces = [{name:'aa'},{name:'bb'}];
+    
   }
 
   ngOnInit(): void {

@@ -14,7 +14,7 @@ export class HttpServiceService {
     return this.http.post(url,data);
   }
   getEcommerce(){
-    let url = `${environment.baseUrl}${ApiPaths.ecommerce}get`;
+    let url = `${environment.baseUrl}${ApiPaths.ecommerce}all`;
     return this.http.get(url);
   }
 }
