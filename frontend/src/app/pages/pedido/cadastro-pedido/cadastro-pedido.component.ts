@@ -16,17 +16,13 @@ import { PedidoStatus } from '../../../../enum/PedidoStatus';
 export class CadastroPedidoComponent implements OnInit {
   cadastroForm: FormGroup;
   selectedDate;
-<<<<<<< HEAD
   public ecommerces;
-=======
-  // @ViewChild('selectedDate') datePicker: DatePickerComponent;
->>>>>>> b8ab8fbe2add9179be3863b658a30783c5b28abd
 
 
   constructor(private formBuilder: FormBuilder, private httpService: HttpServiceService) {
     this.getEcommerces();
     this.cadastroForm = this.formBuilder.group({
-      products: this.formBuilder.array([this.initProducts()]),
+      listProducts: this.formBuilder.array([this.initlistProducts()]),
       deliverDate: [null],
       requestDate: [null],
       status: [this.statusPedido],
@@ -36,19 +32,32 @@ export class CadastroPedidoComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(formValues) {
+    formValues.deliverDate = formValues.deliverDate.format('YYYY-MM-DD');
+    formValues.requestDate = formValues.requestDate.format('YYYY-MM-DD');
+    console.log(formValues.deliverDate);
+    console.log(formValues.requestDate);
+    console.log(formValues.selectEcommerce);
+    this.httpService.addPedido(formValues).subscribe(
 
+      (success: HttpResponse<any>) => {
+        console.log(success);
+      },
+      (failure) => {
+        console.log(":(");
+      }
+
+    );
   }
-  get products(): FormArray {    
-    return this.cadastroForm.get("products") as FormArray;
+  get listProducts(): FormArray {    
+    return this.cadastroForm.get("listProducts") as FormArray;
   }
-  initProducts() {
+  initlistProducts() {
     return this.formBuilder.group({
       name: ['', Validators.required]
     });
   }
   addProduct() {
-    this.products.push(this.initProducts());
-    console.log(this.products);
+    this.listProducts.push(this.initlistProducts());
   }
 
   get statusPedido() {

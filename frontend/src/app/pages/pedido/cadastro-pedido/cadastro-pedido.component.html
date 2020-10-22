@@ -28,8 +28,8 @@
                 <dp-date-picker name="deliverDate" formControlName="deliverDate"></dp-date-picker>
 
             </div>
-            <div formArrayName="products">
-                <div class="div2" *ngFor="let product of products.controls; let i = index" [formGroupName]="i">
+            <div formArrayName="listProducts">
+                <div class="div2" *ngFor="let product of listProducts.controls; let i = index" [formGroupName]="i">
                     <label for="produto">
                         Nome do produto
                     </label>

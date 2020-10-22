@@ -3,5 +3,4 @@ export enum PedidoStatus {
     Postado = "Postado",
     Caminho = "A Caminho",
     Chegou = "Chegou"
-
 }

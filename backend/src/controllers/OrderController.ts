@@ -16,11 +16,9 @@ export default {
             estimatedDeliverDate,
             status
         } = request.body;
-
         const ecommerce = await EcommerceController.getEcommerceById(selectEcommerce);
         const customer = await CustomerController.getCustomerById(1);
         const products = await ProductController.addProducts(listProducts);
-
         const orderRepository = getRepository(Order);
 
         const orderDate = new Date(requestDate);
@@ -36,11 +34,10 @@ export default {
             estimatedDeliveryDate,
             status
         }
-
         const order = orderRepository.create(data);
 
         await orderRepository.save(order);
-
+        
         return response.status(201).json(order);
     },
 

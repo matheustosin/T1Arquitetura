@@ -17,4 +17,9 @@ export class HttpServiceService {
     let url = `${environment.baseUrl}${ApiPaths.ecommerce}all`;
     return this.http.get(url);
   }
+  addPedido(data){
+    let url = `${environment.baseUrl}${ApiPaths.order}add`;
+    return this.http.post(url,data);
+
+  }
 }
