@@ -13,13 +13,13 @@ import { DatePickerComponent } from 'ng2-date-picker';
 export class CadastroPedidoComponent implements OnInit {
   cadastroForm: FormGroup;
   selectedDate;
-  // @ViewChild('selectedDate') datePicker: DatePickerComponent;  
+  // @ViewChild('selectedDate') datePicker: DatePickerComponent;
 
 
   constructor(private formBuilder: FormBuilder) {
     this.cadastroForm = this.formBuilder.group({
       name: ["", Validators.required],
-      products: this.formBuilder.array([this.initProducts()]),
+      listProducts: this.formBuilder.array([this.initProducts()]),
       deliverDate: [""],
       requestDate: [""],
       status: [this.statusPedido]
