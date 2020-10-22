@@ -16,7 +16,11 @@ import { PedidoStatus } from '../../../../enum/PedidoStatus';
 export class CadastroPedidoComponent implements OnInit {
   cadastroForm: FormGroup;
   selectedDate;
+<<<<<<< HEAD
   public ecommerces;
+=======
+  // @ViewChild('selectedDate') datePicker: DatePickerComponent;
+>>>>>>> b8ab8fbe2add9179be3863b658a30783c5b28abd
 
 
   constructor(private formBuilder: FormBuilder, private httpService: HttpServiceService) {

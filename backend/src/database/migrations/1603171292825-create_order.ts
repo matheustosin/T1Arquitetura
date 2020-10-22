@@ -14,6 +14,22 @@ export class createOrder1603171292825 implements MigrationInterface {
                     generationStrategy: "increment"
                 },
                 {
+                    name: "dt_order",
+                    type: "date"
+                },
+                {
+                    name: "dt_delivery",
+                    type: "date"
+                },
+                {
+                    name: "dt_estimated_delivery",
+                    type: "date"
+                },
+                {
+                    name: "status",
+                    type: "string"
+                },
+                {
                     name: "ecommerce_id",
                     type: "integer"
                 },

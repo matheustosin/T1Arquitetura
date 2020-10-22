@@ -3,6 +3,10 @@ import { getRepository } from 'typeorm';
 
 import Product from '../models/Product';
 
+interface ProductRequest {
+    name: string;
+}
+
 export default {
   async create(request: Request, response: Response) {
     const { name } = request.body;
@@ -17,12 +21,14 @@ export default {
     return response.status(201).json(product);
   },
 
-  async addProducts(products: string[]) {
+  async addProducts(products: ProductRequest[]) {
     const productRepository = getRepository(Product);
 
     const productsToReturn: Product[] = [];
 
-    for (const name of products) {
+    const productList = products.map((prod) => prod.name);
+
+    for (const name of productList) {
         let product = await productRepository.findOne({ name });
         if (product) {
             productsToReturn.push(product);
@@ -33,6 +39,7 @@ export default {
             productsToReturn.push(product);
         }
     }
+
     return productsToReturn;
   },
 

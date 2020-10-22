@@ -11,8 +11,6 @@ drop table orders_products_products;
 drop table customers;
 
 
-
-
 delete from migrations;
 
 delete from sqlite_sequence;
