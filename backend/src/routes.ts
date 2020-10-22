@@ -12,6 +12,7 @@ routes.get('/ecommerce/all', EcommerceController.index);
 
 routes.post('/order/add', OrderController.create);
 routes.get('/order/getOrdersByEcommerce/:id', OrderController.getOrdersByEcommerce);
+routes.get('/order/getOrdersByParams', OrderController.getOrdersByParams);
 
 routes.post('/product/add', ProductController.create);
 

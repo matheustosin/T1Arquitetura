@@ -22,6 +22,10 @@ export class createOrder1603171292825 implements MigrationInterface {
                     type: "date"
                 },
                 {
+                    name: "dt_estimated_delivery",
+                    type: "date"
+                },
+                {
                     name: "status",
                     type: "string"
                 },

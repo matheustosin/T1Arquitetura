@@ -15,6 +15,9 @@ export default class Order {
     @Column({ name: 'dt_delivery', type: 'date' })
     deliveryDate: Date;
 
+    @Column({ name: 'dt_estimated_delivery', type: 'date'})
+    estimatedDeliveryDate: Date;
+
     @Column({ name: 'status'})
     status: string;
 
