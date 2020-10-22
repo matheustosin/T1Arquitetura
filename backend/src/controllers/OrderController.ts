@@ -9,20 +9,29 @@ import CustomerController from '../controllers/CustomerController';
 export default {
     async create(request: Request, response: Response) {
         const {
-            ecommerceId,
-            listProducts
+            selectEcommerce,
+            listProducts,
+            requestDate,
+            deliverDate,
+            status
         } = request.body;
 
-        const ecommerce = await EcommerceController.getEcommerceById(ecommerceId);
+        const ecommerce = await EcommerceController.getEcommerceById(selectEcommerce);
         const customer = await CustomerController.getCustomerById(1);
         const products = await ProductController.addProducts(listProducts);
 
         const orderRepository = getRepository(Order);
 
+        const orderDate = new Date(requestDate);
+        const deliveryDate = new Date(deliverDate);
+
         const data = {
             ecommerce,
             customer,
-            products
+            products,
+            orderDate,
+            deliveryDate,
+            status
         }
 
         const order = orderRepository.create(data);

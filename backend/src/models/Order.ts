@@ -9,6 +9,15 @@ export default class Order {
     @PrimaryGeneratedColumn('increment')
     id: number;
 
+    @Column({ name: 'dt_order', type: 'date' })
+    orderDate: Date;
+
+    @Column({ name: 'dt_delivery', type: 'date' })
+    deliveryDate: Date;
+
+    @Column({ name: 'status'})
+    status: string;
+
     @ManyToMany(() => Product)
     @JoinTable()
     products: Product[];
