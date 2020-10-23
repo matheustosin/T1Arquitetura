@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ConsultarPedidoComponent } from './consultar-pedido/consultar-pedido.component';
 import { MenuConsultaComponent } from './menu-consulta/menu-consulta.component';
 import { TableConsultaComponent } from './table-consulta/table-consulta.component';
 

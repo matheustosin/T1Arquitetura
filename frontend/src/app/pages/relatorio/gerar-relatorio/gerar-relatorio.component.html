@@ -1,0 +1,42 @@
+<section>
+  <div id="header-form">
+    <img src="../../../assets/default-placeholder.png" />
+    <h2>
+      Gerar relatórios
+    </h2>
+    <h3>
+    </h3>
+  </div>
+  <table>
+    <tr class="header-table">
+      <th (click) = "sort('name')">
+        Ecommerce
+      </th>
+      <th (click) = "sort('orderDate')">
+        Data do pedido
+      </th>
+      <th (click) = "sort('deliveryDate')">
+        Data de entrega
+      </th>
+      <th (click) = "sort('status')">
+        Status do pedido
+      </th>
+    </tr>
+    <tr *ngFor = "let order of listOrder">
+      <td>
+        {{order.orderDate}}
+      </td>
+      <td>
+        {{order.orderDate}}
+      </td>
+      <td>
+        {{order.deliveryDate}}
+      </td>
+      <td>
+        {{order.status}}
+      </td>
+    </tr>
+
+  </table>
+
+</section>

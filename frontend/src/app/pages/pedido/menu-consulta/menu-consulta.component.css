@@ -5,19 +5,30 @@
     align-items: flex-start;
     width: inherit;
     height: inherit;
+    margin-top:28px;
 }
 
 .card{
-    border: 1px solid black;
-    width: 150px;
-    height: 180px;
+    width: 200px;
+    min-height: 180px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 7px;
     padding-top:    7px;
+    margin-left: 10px;
+    border-radius: 15px;
+    background-color: beige;
+    box-shadow: 2px 2px 8px black;
+    text-align: left;
+}
+div h2, div h3{
+    font-weight: lighter;
 }
 img{
     width: 75%;
+}
+p, li{
+    text-indent: 15px;
 }

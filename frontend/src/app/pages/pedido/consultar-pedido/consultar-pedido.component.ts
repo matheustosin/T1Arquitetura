@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpServiceService } from 'src/app/services/http-service.service';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-consultar-pedido',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultarPedidoComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

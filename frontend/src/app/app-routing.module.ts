@@ -5,17 +5,21 @@ import { CadastroPedidoComponent } from './pages/pedido/cadastro-pedido/cadastro
 import { ConsultarPedidoComponent } from './pages/pedido/consultar-pedido/consultar-pedido.component';
 import { MenuConsultaComponent } from './pages/pedido/menu-consulta/menu-consulta.component';
 import { TableConsultaComponent } from './pages/pedido/table-consulta/table-consulta.component';
+import { GerarRelatorioComponent } from './pages/relatorio/gerar-relatorio/gerar-relatorio.component';
 
 const routes: Routes = [
   { path: 'cadastro-ecommerce', component: FormComponent },
   { path: 'cadastro-pedido', component: CadastroPedidoComponent },
+  { path: 'gerar-relatorio', component: GerarRelatorioComponent },
+
   {
     path: 'consulta-pedido', component: ConsultarPedidoComponent, children: [
       { path: '', component: MenuConsultaComponent, outlet: "consultarPedido" },
       { path: 'consultarPedido', component: MenuConsultaComponent, outlet: "consultarPedido" },
       { path: 'tableConsulta', component: TableConsultaComponent, outlet: "consultarPedido" }
     ]
-  }
+  },
+
 ];
 
 @NgModule({

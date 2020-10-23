@@ -9,23 +9,22 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
 })
 export class MenuConsultaComponent implements OnInit {
 
-  constructor(private httpService : HttpServiceService) { }
-
-  ngOnInit(): void {
+  public listOrder;
+  constructor(private httpService: HttpServiceService) {
     this.getPedido();
   }
-
-
-  getPedido(){
-    this.httpService.getPedido().subscribe(
-
-      (success: HttpResponse<any>) => {
-        console.log(success);
+  ngOnInit(){
+  }
+  async getPedido() {
+    await this.httpService.getPedido().subscribe(
+      (success) => {
+        this.listOrder = success;
+        console.log(this.listOrder);
       },
       (failure) => {
         console.log(":(");
       }
-
     );
+    console.log(this.listOrder);
   }
 }

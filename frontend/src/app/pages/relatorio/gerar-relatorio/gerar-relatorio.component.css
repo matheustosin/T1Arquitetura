@@ -1,0 +1,35 @@
+p{
+  margin:0;
+  padding: 0;
+}
+img{
+  width: 80px;
+}
+section{
+  margin-top:5%;
+}
+section, #header-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+table{
+  width: 85%;
+  height: auto;
+  border-collapse: collapse;
+  text-align: center;
+  border-top: none;
+  border: 5px solid azure;
+  padding-bottom: 5px;
+}
+
+.header-table{
+  background-color: azure;
+}
+.header-table th{
+  cursor: pointer;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+

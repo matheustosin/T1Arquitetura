@@ -48,7 +48,7 @@ export class CadastroPedidoComponent implements OnInit {
 
     );
   }
-  get listProducts(): FormArray {    
+  get listProducts(): FormArray {
     return this.cadastroForm.get("listProducts") as FormArray;
   }
   initlistProducts() {

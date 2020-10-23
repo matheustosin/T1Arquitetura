@@ -1,12 +1,34 @@
 <div class="main">
 
-    <div class="card">
-        <div>
-            <h2>
-                Pedido 1
-            </h2>
+    <div *ngFor="let order of listOrder">
+        <div class="card">
+            <div>
+                <h2>
+                    Pedido {{order.id}}
+                </h2>
+            </div>
+            <img src="../../../assets/default-placeholder.png" />
+            <div class="contentCard">
+                <h3>
+                    Data do pedido <p>{{order.orderDate}}</p>
+                </h3>
+                <h3>
+                    Data de entrega <p>{{order.deliveryDate}}</p>
+                </h3>
+                <h3>
+                    Status <p> {{order.status}} </p>
+                </h3>
+                <h3>
+                    Lista dos produtos
+                    <ol>
+                        <li *ngFor= "let product of order.products">
+                            {{product.name}}
+                        </li>
+
+                    </ol>
+                </h3>
+            </div>
         </div>
-        <img src="../../../assets/default-placeholder.png" />
-        <a href="#">Acessar Pedido</a>
+
     </div>
 </div>
