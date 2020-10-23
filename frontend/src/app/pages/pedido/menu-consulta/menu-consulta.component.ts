@@ -19,7 +19,6 @@ export class MenuConsultaComponent implements OnInit {
     await this.httpService.getPedido().subscribe(
       (success) => {
         this.listOrder = success;
-        console.log(this.listOrder);
       },
       (failure) => {
         console.log(":(");

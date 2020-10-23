@@ -40,7 +40,7 @@ export class CadastroPedidoComponent implements OnInit {
     this.httpService.addPedido(formValues).subscribe(
 
       (success: HttpResponse<any>) => {
-        console.log(success);
+        alert("Adicionado com sucesso!");
       },
       (failure) => {
         console.log(":(");

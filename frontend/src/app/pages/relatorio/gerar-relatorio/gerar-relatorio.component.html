@@ -1,6 +1,6 @@
 <section>
   <div id="header-form">
-    <img src="../../../assets/default-placeholder.png" />
+    <img src="../../../assets/shopping-cart.png" />
     <h2>
       Gerar relatórios
     </h2>
@@ -9,7 +9,7 @@
   </div>
   <table>
     <tr class="header-table">
-      <th (click) = "sort('name')">
+      <th (click) = "sort('ecommerce')">
         Ecommerce
       </th>
       <th (click) = "sort('orderDate')">
@@ -24,7 +24,7 @@
     </tr>
     <tr *ngFor = "let order of listOrder">
       <td>
-        {{order.orderDate}}
+        {{order.ecommerce.name}}
       </td>
       <td>
         {{order.orderDate}}

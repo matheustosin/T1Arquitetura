@@ -26,7 +26,7 @@ export class FormComponent implements OnInit {
     this.httpService.addEcommerce(name).subscribe(
 
       (success: HttpResponse<any>) => {
-        console.log(success);
+        alert("Adicionado com sucesso!")
       },
       (failure) => {
         console.log(":(");

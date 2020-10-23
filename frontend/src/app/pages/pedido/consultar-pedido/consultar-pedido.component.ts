@@ -18,7 +18,7 @@ export class ConsultarPedidoComponent implements OnInit {
 
   carregaPedidos(): void {
     this.httpService.getPedido().subscribe(
-      (success: HttpResponse<any>) => {
+      (success) => {
         this.listaPedidos = success;
       },
       (failure) => {
