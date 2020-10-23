@@ -20,6 +20,9 @@ export class HttpServiceService {
   addPedido(data){
     let url = `${environment.baseUrl}${ApiPaths.order}add`;
     return this.http.post(url,data);
-
+  }
+  getPedido(){
+    let url = `${environment.baseUrl}${ApiPaths.order}all`;
+    return this.http.get(url);
   }
 }

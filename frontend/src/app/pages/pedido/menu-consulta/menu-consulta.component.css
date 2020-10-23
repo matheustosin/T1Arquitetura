@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: inherit;
+    height: inherit;
+}
+
+.card{
+    border: 1px solid black;
+    width: 150px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 7px;
+    padding-top:    7px;
+}
+img{
+    width: 75%;
+}

@@ -1,0 +1,32 @@
+p{
+    margin:0;
+    padding: 0;
+}
+img{
+    width: 80px;
+}
+section{
+    margin-top:5%;
+}
+section, #header-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#header-form{
+    flex-direction: column;
+}
+#header-form h2{
+    font-weight: 400;
+}
+#header-form h3{
+    font-weight: 100;
+    text-decoration: none;
+    color:grey;
+}
+#container-form{
+    display: flex;
+    height: 60vh;
+    width: 90%;
+}
