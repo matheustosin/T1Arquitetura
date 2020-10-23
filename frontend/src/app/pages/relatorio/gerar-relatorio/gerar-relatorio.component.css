@@ -14,6 +14,7 @@ section, #header-form{
   align-items: center;
   flex-direction: column;
 }
+<<<<<<< HEAD
 table{
   width: 85%;
   height: auto;
@@ -33,3 +34,50 @@ table{
 
 tr:nth-child(odd) {background-color: #f2f2f2;}
 
+=======
+#header-form{
+  flex-direction: column;
+}
+#header-form h2{
+  font-weight: 400;
+}
+#header-form h3{
+  font-weight: 100;
+  text-decoration: none;
+  color:grey;
+}
+#container-form{
+  display: flex;
+  height: 60vh;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 3%;
+  overflow-y: auto;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+select {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 0px;
+}
+
+select option {
+  padding: 2px;
+  border-radius: 10px;
+  border: 0px;
+}
+>>>>>>> c24846e0ccfbad9f10ea715c51ef4893b7296187

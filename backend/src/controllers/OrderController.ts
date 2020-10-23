@@ -147,7 +147,7 @@ export default {
         if (deliveredOnTime) {
             customerOrders = customerOrders.filter(element => DateUtils.compareTo(element.deliveryDate, element.estimatedDeliveryDate));
         }
-
+        console.log(customerOrders);
         return response.json(customerOrders);
     }
 }

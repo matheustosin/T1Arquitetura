@@ -8,11 +8,22 @@ import { HttpResponse } from '@angular/common/http';
   styleUrls: ['./consultar-pedido.component.css']
 })
 export class ConsultarPedidoComponent implements OnInit {
+  public listaPedidos;
 
-  constructor() {
+  constructor(private httpService: HttpServiceService) {
   }
 
   ngOnInit(): void {
   }
 
+  carregaPedidos(): void {
+    this.httpService.getPedido().subscribe(
+      (success: HttpResponse<any>) => {
+        this.listaPedidos = success;
+      },
+      (failure) => {
+        console.log(":(");
+      }
+    );
+  }
 }
