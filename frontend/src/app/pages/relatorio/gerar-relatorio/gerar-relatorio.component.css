@@ -36,14 +36,26 @@ section, #header-form{
   overflow-y: auto;
 }
 
-.card {
-  width: 250px;
-  height: 100px;
-  border-radius: 10px;
-  background: #fff;
-  transition: .2s;
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
 }
 
-.card:hover {
-  transform: scale(1.1);
+.example-radio-button {
+  margin: 5px;
+}
+
+select {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 0px;
+}
+
+select option {
+  padding: 2px;
+  border-radius: 10px;
+  border: 0px;
 }

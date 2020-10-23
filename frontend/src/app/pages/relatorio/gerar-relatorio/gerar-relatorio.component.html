@@ -1,0 +1,24 @@
+<section>
+  <div id="header-form">
+    <img src="../../../assets/default-placeholder.png" />
+    <h2>
+      Consulta de pedidos
+    </h2>
+    <h3>
+      Selecione um pedido para visualizar seus detalhes
+    </h3>
+  </div>
+  <div id="container-form">
+    <!-- <select (change)="onChange($event)">
+      <option *ngFor="let v of tiposFiltro" [value]="v">{{v}}</option>
+    </select> -->
+    <select (change)="onChange($event)">
+      <option value="1">Selecione...</option>
+      <option value="2">Ecommerce</option>
+      <option value="3">Data do Pedido</option>
+      <option value="4">Prazo Cumprido</option>
+      <option value="5">Status do Pedido</option>
+    </select>
+
+  </div>
+</section>
