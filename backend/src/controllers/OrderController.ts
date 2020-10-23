@@ -140,7 +140,7 @@ export default {
         if ( status ) filter = { status: status };
 
         let customerOrders = await orderRepository.find({
-            relations: ['products'],
+            relations: ['products', 'ecommerce'],
             where: filter
         });
 
